@@ -1,0 +1,13 @@
+name = "MooreFuns"
+uuid = "bbb93fa1-ab0d-4beb-b667-31f4aea947e3"
+authors = ["Ryan Crawford"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
