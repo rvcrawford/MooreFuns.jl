@@ -1,4 +1,4 @@
-module YourPackageName
+module MooreFuns
 
 export greet_your_package_name
 include("functions.jl")
