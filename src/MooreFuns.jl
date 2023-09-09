@@ -7,7 +7,7 @@ import XLSX
 export greet_your_package_name
 export accession_template
 export ccb_dict
-export make acc
+export make_accession
 include("functions.jl")
 
 
