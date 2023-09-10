@@ -1,7 +1,5 @@
 module MooreFuns
 
-import DataFrames
-import CSV
 
 # Write your package code here.
 export greet_your_package_name

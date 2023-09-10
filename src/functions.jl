@@ -1,3 +1,7 @@
+import DataFrames
+import CSV
+
+
 function greet_your_package_name()
     println("Hello MooreFuns")
 end
@@ -18,7 +22,7 @@ function make_accession(accession::String, species_abb::String)
     accession_template(accession, species)
 end
 
-test_df = CSV.read("./data/test.csv", DataFrame)
+test_df = CSV.read("./data/test.csv", DataFrames.DataFrame)
 
 
 # export greet_your_package_name
