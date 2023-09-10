@@ -23,7 +23,7 @@ function make_accession(accession::String, species_abb::String)
 end
 
 datapath = joinpath(@__DIR__, "..", "data")
-test_df = CSV.read(joinpath( datapath, "test.csv"),DataFrame)
+test_df = CSV.read(joinpath( datapath, "test.csv"), DataFrames.DataFrame)
 
 
 # export greet_your_package_name
