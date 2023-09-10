@@ -18,6 +18,7 @@ function make_accession(accession::String, species_abb::String)
     accession_template(accession, species)
 end
 
+test_df = CSV.read("./data/test.csv", DataFrame)
 
 
 # export greet_your_package_name
