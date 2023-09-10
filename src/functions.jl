@@ -22,8 +22,13 @@ function make_accession(accession::String, species_abb::String)
     accession_template(accession, species)
 end
 
+# define a path to our data directory
 datapath = joinpath(@__DIR__, "..", "data")
+
+# load in our testing set
 test_df = CSV.read(joinpath( datapath, "test.csv"), DataFrames.DataFrame)
+
+brassica_df = CSV.read(joinpath( datapath, "24NYBR.csv"), DataFrames.DataFrame)
 
 
 # export greet_your_package_name

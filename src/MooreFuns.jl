@@ -7,6 +7,7 @@ export accession_template
 export ccb_dict
 export make_accession
 export test_df
+export brassica_df
 include("functions.jl")
 
 end
