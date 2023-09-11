@@ -25,7 +25,7 @@ end
 function accession_df(x::accession_template)
     df = DataFrames.DataFrame(accession = x.accession, species = x.species)
     to_add = DataFrames.DataFrame(population_name = missing, organization_name = missing, synonym = missing)
-    to_add2 = repeat(to_add, nrow(df))
+    to_add2 = repeat(to_add, DataFrames.nrow(df))
     hcat(df, to_add2)
 end
 
