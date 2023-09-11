@@ -25,7 +25,8 @@ end
 function accession_df(x::accession_template)
     df = DataFrames.DataFrame(accession = x.accession, species = x.species)
     to_add = DataFrames.DataFrame(population_name = missing, organization_name = missing, synonym = missing)
-    hcat(df, to_add)
+    to_add2 = repeat(to_add, nrow(df))
+    hcat(df, to_add2)
 end
 
 # define a path to our data directory
