@@ -22,13 +22,23 @@ function make_accession(accession::String, species_abb::String)
     accession_template(accession, species)
 end
 
+function accession_df(x::accession_template)
+    df = DataFrame(accession_template)
+    to_add = DataFrame(population_name = missing, organization_name = missing, synonym = missing)
+    hcat(df, to_add)
+end
+
 # define a path to our data directory
 datapath = joinpath(@__DIR__, "..", "data")
 
 # load in our testing set
 test_df = CSV.read(joinpath( datapath, "test.csv"), DataFrames.DataFrame)
 
+# load in our brassica
 brassica_df = CSV.read(joinpath( datapath, "24NYBR.csv"), DataFrames.DataFrame)
+
+# load in our trial df
+bb_col_names_df = CSV.read(joinpath( datapath, "bb_trial_col_names.csv"), DataFrames.DataFrame)
 
 
 # export greet_your_package_name

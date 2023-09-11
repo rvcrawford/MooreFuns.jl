@@ -1,0 +1,25 @@
+i_th,name,example_value
+1,trial_name,23NYWPALT
+2,breeding_program,LCCB
+3,location,Freeville N7
+4,year,2023
+5,design_type,RCBD
+6,description,23NYWPALT
+7,trial_type,NA
+8,plot_width,NA
+9,plot_length,NA
+10,field_size,NA
+11,planting_date,NA
+12,harvest_date,NA
+13,plot_name,23NYWPALT_101
+14,accession_name,14WPX1551-1-3-0-0
+15,plot_number,101
+16,block_number,1
+17,is_a_control,NA
+18,rep_number,NA
+19,range_number,NA
+20,row_number,1
+21,col_number,1
+22,seedlot_name,NA
+23,num_seed_per_plot,NA
+24,weight_gram_seed_per_plot,NA
