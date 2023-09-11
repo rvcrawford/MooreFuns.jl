@@ -23,7 +23,7 @@ function make_accession(accession::String, species_abb::String)
 end
 
 function accession_df(x::accession_template)
-    df = DataFrame(accession_template)
+    df = DataFrame(accession = x.accession, species = x.species)
     to_add = DataFrame(population_name = missing, organization_name = missing, synonym = missing)
     hcat(df, to_add)
 end
@@ -38,7 +38,7 @@ test_df = CSV.read(joinpath( datapath, "test.csv"), DataFrames.DataFrame)
 brassica_df = CSV.read(joinpath( datapath, "24NYBR.csv"), DataFrames.DataFrame)
 
 # load in our trial df
-bb_col_names_df = CSV.read(joinpath( datapath, "bb_trial_col_names.csv"), DataFrames.DataFrame)
+bb_col_names_df = CSV.read(joinpath( datapath, "bb_trial_col_names.csv"), missingstring = "NA", DataFrames.DataFrame)
 
 
 # export greet_your_package_name
