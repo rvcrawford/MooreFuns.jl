@@ -23,8 +23,8 @@ function make_accession(accession::String, species_abb::String)
 end
 
 function accession_df(x::accession_template)
-    df = DataFrame(accession = x.accession, species = x.species)
-    to_add = DataFrame(population_name = missing, organization_name = missing, synonym = missing)
+    df = DataFrames.DataFrame(accession = x.accession, species = x.species)
+    to_add = DataFrames.DataFrame(population_name = missing, organization_name = missing, synonym = missing)
     hcat(df, to_add)
 end
 
