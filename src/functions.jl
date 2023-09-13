@@ -50,6 +50,7 @@ function make_grid(n_row::Int, n_col::Int)
     col_df = DataFrames.DataFrame(col_number = 1:n_col)
     cross_df = DataFrames.crossjoin(row_df, col_df)
     cross_df.plot_number = cross_df.row_number .* 100 .+ cross_df.col_number
+    return cross_df
 end
 
 # create missings dataframe
