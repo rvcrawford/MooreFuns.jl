@@ -38,6 +38,13 @@ function make_grid(n_row::Int, n_col::Int)
     cross_df.plot_number = cross_df.row_number .* 100 .+ cross_df.col_number
 end
 
+# create missings dataframe
+function make_ccb_missings()
+    missings = bb_col_names_df[ismissing.(bb_col_names_df.example_value), :]
+# unstack the above
+    wide_missings = DataFrames.unstack(missings, :i_th, :name, :example_value)
+    DataFrames.select!(wide_missings, Not(:i_th))
+end
 
 ccb_trial_header = DataFrames.DataFrame(trial_name = String[],
 breeding_program = String[],
