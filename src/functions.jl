@@ -1,6 +1,20 @@
 import DataFrames
 import CSV
 
+# define a path to our data directory
+datapath = joinpath(@__DIR__, "..", "data")
+
+# load in our testing set
+test_df = CSV.read(joinpath( datapath, "test.csv"), DataFrames.DataFrame)
+
+# load in our brassica
+brassica_df = CSV.read(joinpath( datapath, "24NYBR.csv"), DataFrames.DataFrame)
+
+# load in our trial df
+bb_col_names_df = CSV.read(joinpath( datapath, "bb_trial_col_names.csv"), missingstring = "NA", DataFrames.DataFrame)
+
+
+
 
 function greet_your_package_name()
     println("Hello MooreFuns")
@@ -58,18 +72,6 @@ description = String[]
 
     # cross_df.accession_name = accession_name
     # cross_df.block_number = repeat(1:4,inner = 15)
-
-# define a path to our data directory
-datapath = joinpath(@__DIR__, "..", "data")
-
-# load in our testing set
-test_df = CSV.read(joinpath( datapath, "test.csv"), DataFrames.DataFrame)
-
-# load in our brassica
-brassica_df = CSV.read(joinpath( datapath, "24NYBR.csv"), DataFrames.DataFrame)
-
-# load in our trial df
-bb_col_names_df = CSV.read(joinpath( datapath, "bb_trial_col_names.csv"), missingstring = "NA", DataFrames.DataFrame)
 
 
 # export greet_your_package_name
