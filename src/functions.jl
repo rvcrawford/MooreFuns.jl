@@ -38,11 +38,16 @@ end
 
 # makes a dataframe including the
 function accession_df(x::accession_template)
-    d_vec = accession_template[]
-    push!(d_vec, x)
-    df = DataFrames.DataFrame(d_vec)
     to_add = DataFrames.DataFrame(population_name = missing, organization_name = missing, synonym = missing)
-    DataFrames.crossjoin(df, to_add)
+    if typeof(x)==Vector{accession_template} 
+        df = DataFrames.DataFrame(x)
+        DataFrames.crossjoin(df, to_add)
+    else
+        d_vec = accession_template[]
+        push!(d_vec, x)
+        df = DataFrames.DataFrame(d_vec)
+        DataFrames.crossjoin(df, to_add)
+    end
 end
 
 
