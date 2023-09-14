@@ -37,7 +37,7 @@ function make_accession(accession::String, species_abb::String)
 end
 
 # makes a dataframe including the
-function accession_df(x::accession_template)
+function accession_df(x)
     to_add = DataFrames.DataFrame(population_name = missing, organization_name = missing, synonym = missing)
     if typeof(x)==Vector{accession_template} 
         df = DataFrames.DataFrame(x)
