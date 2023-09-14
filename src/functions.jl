@@ -39,9 +39,10 @@ end
 # makes a dataframe including the
 function accession_df(x::accession_template)
     d_vec = accession_template[]
-    df = DataFrame(d_vec)
+    push!(d_vec, x)
+    df = DataFrames.DataFrame(d_vec)
     to_add = DataFrames.DataFrame(population_name = missing, organization_name = missing, synonym = missing)
-    crossjoin(df, to_add2)
+    DataFrames.crossjoin(df, to_add2)
 end
 
 
