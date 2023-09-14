@@ -42,7 +42,7 @@ function accession_df(x::accession_template)
     push!(d_vec, x)
     df = DataFrames.DataFrame(d_vec)
     to_add = DataFrames.DataFrame(population_name = missing, organization_name = missing, synonym = missing)
-    DataFrames.crossjoin(df, to_add2)
+    DataFrames.crossjoin(df, to_add)
 end
 
 
