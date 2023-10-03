@@ -21,8 +21,8 @@ function greet_your_package_name()
 end
 
 struct accession_template
-    accession::String
-    species::String
+    accession_name::String
+    species_name::String
 end
 
 ccb_dict = Dict{String,String}("wp"=> "Pisum sativum", 
@@ -31,9 +31,9 @@ ccb_dict = Dict{String,String}("wp"=> "Pisum sativum",
 "cr" => "Secale cereale"
 )
 
-function make_accession(accession::String, species_abb::String)
+function make_accession(accession_name::String, species_abb::String)
     species = ccb_dict[species_abb]
-    accession_template(accession, species)
+    accession_template(accession_name, species_name)
 end
 
 # makes a dataframe including the
@@ -49,7 +49,6 @@ function accession_df(x)
         DataFrames.crossjoin(df, to_add)
     end
 end
-
 
 function make_grid(n_row::Int, n_col::Int)
     row_df = DataFrames.DataFrame(row_number = 1:n_row)
