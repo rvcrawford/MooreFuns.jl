@@ -13,6 +13,8 @@ brassica_df = CSV.read(joinpath( datapath, "24NYBR.csv"), DataFrames.DataFrame)
 # load in our trial df
 bb_col_names_df = CSV.read(joinpath( datapath, "bb_trial_col_names.csv"), missingstring = "NA", DataFrames.DataFrame)
 
+# load in our sample trial location
+location_df = CSV.read(joinpath( datapath, "sample_trial_location.csv"), missingstring = "NA", DataFrames.DataFrame)
 
 
 
@@ -76,8 +78,3 @@ description = String[]
 
 
 
-    # cross_df.accession_name = accession_name
-    # cross_df.block_number = repeat(1:4,inner = 15)
-
-
-# export greet_your_package_name
