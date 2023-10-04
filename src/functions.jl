@@ -17,7 +17,6 @@ bb_col_names_df = CSV.read(joinpath( datapath, "bb_trial_col_names.csv"), missin
 location_df = CSV.read(joinpath( datapath, "sample_trial_location.csv"), missingstring = "NA", DataFrames.DataFrame)
 
 
-
 function greet_your_package_name()
     println("Hello MooreFuns")
 end
