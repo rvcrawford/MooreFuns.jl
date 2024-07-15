@@ -34,7 +34,7 @@ ccb_dict = Dict{String,String}("wp"=> "Pisum sativum",
 )
 
 function make_accession(accession_name::String, species_abb::String)
-    species = ccb_dict[species_abb]
+    species_name = ccb_dict[species_abb]
     accession_template(accession_name, species_name)
 end
 
