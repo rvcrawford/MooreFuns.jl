@@ -30,6 +30,7 @@ ccb_dict = Dict{String,String}("wp"=> "Pisum sativum",
 "hv" => "Vicia villosa",
 "cc" => "Trifolium incarnatum",
 "cr" => "Secale cereale"
+"br" => "brassica"
 )
 
 function make_accession(accession_name::String, species_abb::String)
