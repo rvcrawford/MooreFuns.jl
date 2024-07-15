@@ -29,7 +29,7 @@ end
 ccb_dict = Dict{String,String}("wp"=> "Pisum sativum", 
 "hv" => "Vicia villosa",
 "cc" => "Trifolium incarnatum",
-"cr" => "Secale cereale"
+"cr" => "Secale cereale",
 "br" => "brassica"
 )
 
